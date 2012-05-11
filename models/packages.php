@@ -24,7 +24,7 @@ class LocaliseModelPackages extends JModelList
 	/**
 	 * Autopopulate the model
 	 */
-	protected function populateState() 
+	protected function populateState($ordering = null, $direction = null) 
 	{
 		$app = JFactory::getApplication('administrator');
 		$data = JRequest::getVar('filters');

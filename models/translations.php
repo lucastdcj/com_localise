@@ -21,7 +21,7 @@ class LocaliseModelTranslations extends JModelList
 	protected $filter_fields = array('tag', 'filename', 'path', 'completed', 'translated');
 	protected $translations;
 	protected $items;
-	protected function populateState() 
+	protected function populateState($ordering = null, $direction = null) 
 	{
 		$app = JFactory::getApplication('administrator');
 		$data = JRequest::getVar('filters');
