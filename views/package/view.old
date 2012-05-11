@@ -1,0 +1,33 @@
+<?php defined('_JEXEC') or die('Restricted access');
+
+/**
+ * @version		$Id: view.php 96 2009-03-06 12:55:29Z chdemko $
+ * @copyright	Copyright (C) 2009 - today Localise Team, Inc. All rights reserved.
+ * @license		GNU General Public License, see LICENSE.php
+ */
+jimport('joomla.application.component.view');
+
+/**
+ * Package View class for the Localise component
+ *
+ * @package		Extensions.Components
+ * @subpackage	Localise
+ * @since		1.6
+ */
+class LocaliseViewPackage extends JView
+{
+	protected $filename = null;
+	protected $form = null;
+	protected $extensions = null;
+	protected $pane = null;
+	protected $panel = null;
+	protected $panel_title = null;
+	protected $header = null;
+	function display($tpl = null) 
+	{
+		$this->filename = & $this->get('Filename');
+		$this->form = & $this->get('Form');
+		$this->extensions = & $this->get('Extensions');
+		parent::display($tpl);
+	}
+}
