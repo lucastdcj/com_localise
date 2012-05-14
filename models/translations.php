@@ -21,6 +21,8 @@ class LocaliseModelTranslations extends JModelList
 	protected $filter_fields = array('tag', 'filename', 'path', 'completed', 'translated');
 	protected $translations;
 	protected $items;
+	protected $total_exist;
+	
 	protected function populateState($ordering = null, $direction = null) 
 	{
 		$app = JFactory::getApplication('administrator');
@@ -515,13 +517,15 @@ class LocaliseModelTranslations extends JModelList
 		}
 		return $this->items;
 	}
+	
 	public function getTotal() 
 	{
 		return count($this->_getTranslations());
 	}
+	
 	public function getTotalExist() 
 	{
-		if (!isset($this->_data->total_exist)) 
+		if (!isset($this->total_exist)) 
 		{
 			$i = 0;
 			$translations = $this->_getTranslations();
@@ -532,8 +536,9 @@ class LocaliseModelTranslations extends JModelList
 					$i++;
 				}
 			}
-			$this->_data->total_exist = $i;
+					
+			$this->total_exist = $i;
 		}
-		return $this->_data->total_exist;
+		return $this->total_exist;
 	}
 }

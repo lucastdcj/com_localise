@@ -22,7 +22,7 @@ abstract class LocaliseHelper
 	{
 		JSubMenuHelper::addEntry(JText::_('COM_LOCALISE_SUBMENU_LANGUAGES'), 'index.php?option=com_localise&view=languages', $vName == 'languages');
 		JSubMenuHelper::addEntry(JText::_('COM_LOCALISE_SUBMENU_TRANSLATIONS'), 'index.php?option=com_localise&view=translations', $vName == 'translations');
-		JSubMenuHelper::addEntry(JText::_('COM_LOCALISE_SUBMENU_PACKAGES'), 'index.php?option=com_localise&view=packages', $vName == 'packages');
+		//JSubMenuHelper::addEntry(JText::_('COM_LOCALISE_SUBMENU_PACKAGES'), 'index.php?option=com_localise&view=packages', $vName == 'packages');
 	}
 	static public function isWritable($path) 
 	{
