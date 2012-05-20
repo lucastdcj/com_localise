@@ -185,7 +185,7 @@ abstract class LocaliseHelper
 			if (!array_key_exists($path, $fileIds))
 			{
 				JTable::addIncludePath(JPATH_COMPONENT . '/tables');
-				$table = JTable::getInstance('LocaliseFile', 'LocaliseFileTable');
+				$table = JTable::getInstance('File', 'LocaliseTable');
 				$table->path = $path;
 				$table->store();
 				$fileIds[$path] = new JObject(array('id' => $table->id));
@@ -218,7 +218,7 @@ abstract class LocaliseHelper
 			if (!array_key_exists($path, $fileAssetIds))
 			{
 				JTable::addIncludePath(JPATH_COMPONENT . '/tables');
-				$table = JTable::getInstance('LocaliseLanguage', 'LocaliseLanguageTable');
+				$table = JTable::getInstance('Language', 'LocaliseTable');
 
 				$table->path = $path;
 				$table->store();

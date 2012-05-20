@@ -15,34 +15,8 @@ jimport('joomla.database.table');
  * @package		Extensions.Components
  * @subpackage	Localise
  */
-class LocaliseLanguageTableLocalise extends JTable
+class LocaliseTableLanguage extends JTable
 {
-	/**
-	 * Primary Key
-	 *
-	 * @var int
-	 */
-	var $id = null;
-
-	/**
-	 * @var string
-	 */
-	var $path = null;
-	
-	/**
-	 * @var int
-	 */
-	var $checked_out = null;
-
-	/**
-	 * @var date
-	 */
-	var $checked_out_time = null;
-
-	/**
-	 * @var asset_id
-	 */
-	var $asset_id = null;
 
 	/**
 	 * Constructor

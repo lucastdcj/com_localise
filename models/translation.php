@@ -81,7 +81,7 @@ class LocaliseModelTranslation extends JModelForm
 	 * @param	array	$options Configuration array for model. Optional.
 	 * @return	JTable	A database object
 	 */
-	public function getTable($type = 'LocaliseFile', $prefix = 'LocaliseFileTable', $config = array()) 
+	public function getTable($type = 'File', $prefix = 'LocaliseTable', $config = array()) 
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}
