@@ -23,7 +23,7 @@ class LocaliseTableFile extends JTable
 	 *
 	 * @param object Database connector object
 	 */
-	function LocaliseFileTableLocalise(&$db) 
+	function LocaliseTableFile(&$db) 
 	{
 		parent::__construct('#__localise_file', 'id', $db);
 	}

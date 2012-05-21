@@ -23,7 +23,7 @@ class LocaliseTableLanguage extends JTable
 	 *
 	 * @param object Database connector object
 	 */
-	function LocaliseLanguageTableLocalise(&$db) 
+	function LocaliseTableLanguage(&$db) 
 	{
 		parent::__construct('#__localise_language', 'id', $db);
 	}

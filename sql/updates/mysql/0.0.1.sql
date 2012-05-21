@@ -1,6 +1,4 @@
-DROP TABLE IF EXISTS `#__localise`;
-
-CREATE TABLE IF NOT EXISTS `#__localise__language` (
+CREATE TABLE IF NOT EXISTS `#__localise_language` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `asset_id` int(11) NOT NULL,
   `path` varchar(255) NOT NULL,  
@@ -9,7 +7,7 @@ CREATE TABLE IF NOT EXISTS `#__localise__language` (
   PRIMARY KEY (`id`)  
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-CREATE TABLE IF NOT EXISTS `#__localise__file` (
+CREATE TABLE IF NOT EXISTS `#__localise_file` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `asset_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,

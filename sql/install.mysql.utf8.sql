@@ -1,7 +1,3 @@
-DROP TABLE IF EXISTS `#__localise_language`;
-DROP TABLE IF EXISTS `#__localise_file`;
-DROP TABLE IF EXISTS `#__localise`;
-
 CREATE TABLE IF NOT EXISTS `#__localise_language` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `asset_id` int(11) NOT NULL,
